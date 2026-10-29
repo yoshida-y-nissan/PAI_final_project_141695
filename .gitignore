@@ -1,0 +1,12 @@
+# CLIP のモデル（初回実行時に自動でダウンロードされる。約600MB）
+models/
+
+# phase4_sort.py が実行のたびに保存する画像
+assets/run/
+
+# Python
+__pycache__/
+*.pyc
+
+# API キーなど
+.env

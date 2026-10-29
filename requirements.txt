@@ -1,0 +1,8 @@
+# Python 3.10 の venv で使う。torch と Isaac Sim は専用のインデックスから先に入れる（README の「セットアップ」を参照）
+#   pip install torch==2.5.1 torchvision==0.20.1 --index-url https://download.pytorch.org/whl/cu121
+#   pip install "isaacsim[all,extscache]==4.5.0" --extra-index-url https://pypi.nvidia.com
+numpy==1.26.4
+transformers==4.46.3
+tokenizers==0.20.3
+huggingface_hub==0.36.2
+pyyaml==6.0.3

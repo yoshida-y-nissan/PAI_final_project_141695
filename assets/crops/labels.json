@@ -1,0 +1,98 @@
+[
+  {
+    "name": "cube_0",
+    "color": "red",
+    "position": [
+      0.4,
+      -0.15,
+      0.0257
+    ],
+    "box": [
+      438,
+      268,
+      561,
+      391
+    ],
+    "crop_file": "cube_0.png"
+  },
+  {
+    "name": "cube_1",
+    "color": "blue",
+    "position": [
+      0.4,
+      -0.0,
+      0.0257
+    ],
+    "box": [
+      258,
+      268,
+      381,
+      391
+    ],
+    "crop_file": "cube_1.png"
+  },
+  {
+    "name": "cube_2",
+    "color": "red",
+    "position": [
+      0.4,
+      0.15,
+      0.0257
+    ],
+    "box": [
+      78,
+      268,
+      201,
+      391
+    ],
+    "crop_file": "cube_2.png"
+  },
+  {
+    "name": "cube_3",
+    "color": "blue",
+    "position": [
+      0.55,
+      -0.15,
+      0.0257
+    ],
+    "box": [
+      438,
+      88,
+      561,
+      211
+    ],
+    "crop_file": "cube_3.png"
+  },
+  {
+    "name": "cube_4",
+    "color": "red",
+    "position": [
+      0.55,
+      -0.0,
+      0.0257
+    ],
+    "box": [
+      258,
+      88,
+      381,
+      211
+    ],
+    "crop_file": "cube_4.png"
+  },
+  {
+    "name": "cube_5",
+    "color": "blue",
+    "position": [
+      0.55,
+      0.15,
+      0.0257
+    ],
+    "box": [
+      78,
+      88,
+      201,
+      211
+    ],
+    "crop_file": "cube_5.png"
+  }
+]

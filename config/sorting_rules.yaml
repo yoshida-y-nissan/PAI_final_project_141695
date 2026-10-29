@@ -1,0 +1,25 @@
+# 分別ルール。プロンプトを書き換えるだけで、どのゴミをどの置き場に入れるかが変わる
+model: openai/clip-vit-base-patch32
+# モデルの保存先（プロジェクトからの相対パス）。システムのキャッシュを汚さないようプロジェクト内に置く
+cache_dir: models
+# auto: GPU があれば GPU、なければ CPU
+device: auto
+
+# display_name・display_color は判定モニタ（src/judge_viewer.py）の表示用
+classes:
+  - label: burnable        # 燃えるゴミ
+    bin: burnable_bin
+    display_name: 燃えるゴミ
+    display_color: "#e05a5a"
+    prompts:
+      - "a photo of a red cube"
+      - "a red box on the floor"
+      - "a red object"
+  - label: recyclable      # 資源ゴミ
+    bin: recyclable_bin
+    display_name: 資源ゴミ
+    display_color: "#4a86e8"
+    prompts:
+      - "a photo of a blue cube"
+      - "a blue box on the floor"
+      - "a blue object"
