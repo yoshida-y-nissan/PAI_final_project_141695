@@ -1,0 +1,56 @@
+# 言語指示タスク（src/instruct_sort.py）の設定
+model: openai/clip-vit-base-patch32
+cache_dir: models
+device: auto
+
+# 物体の種類。CLIP は切り出し画像をこの4種類のどれに近いかで判定する（カメラは真上から見下ろしている）
+objects:
+  - label: red_box
+    display_name: 赤の箱
+    display_color: "#e05a5a"
+    prompts:
+      - "a red cube seen from above"
+      - "a red square block"
+      - "a photo of a red box"
+  - label: red_cylinder
+    display_name: 赤の円柱
+    display_color: "#e05a5a"
+    prompts:
+      - "a red cylinder seen from above"
+      - "a red round disk"
+      - "a photo of a red circle"
+  - label: blue_box
+    display_name: 青の箱
+    display_color: "#4a86e8"
+    prompts:
+      - "a blue cube seen from above"
+      - "a blue square block"
+      - "a photo of a blue box"
+  - label: blue_cylinder
+    display_name: 青の円柱
+    display_color: "#4a86e8"
+    prompts:
+      - "a blue cylinder seen from above"
+      - "a blue round disk"
+      - "a photo of a blue circle"
+
+# 置き場（位置は src/instruct_scene.py の BIN_SPECS）
+bins:
+  - label: red
+    display_name: 赤の置き場
+    display_color: "#e88a8a"
+  - label: blue
+    display_name: 青の置き場
+    display_color: "#8ab4f0"
+  - label: green
+    display_name: 緑の置き場
+    display_color: "#7fcf8f"
+  - label: yellow
+    display_name: 黄の置き場
+    display_color: "#e6cf5c"
+
+# チャットの指示を解釈する LLM（OpenAI API）。API キーは環境変数 OPENAI_API_KEY か、プロジェクト直下の .env に書く
+# キーがない・通信できないときは、簡単なルールによる解析に切り替える
+llm:
+  model: gpt-4o-mini
+  timeout: 20
